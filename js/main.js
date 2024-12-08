@@ -72,10 +72,10 @@ function updateCardsDisplay() {
   ).src = `images/${playerHand[1].rank}${playerHand[1].suit}.png`;
   document.getElementById("pl-img-2").style.width = "150px";
 
-  document.getElementById("dl-img-1").src = `images/back.png`;
+  document.getElementById("dl-img-1").src = `images/Back.png`;
   document.getElementById("dl-img-1").style.width = "150px";
 
-  document.getElementById("dl-img-2").src = "images/back.png";
+  document.getElementById("dl-img-2").src = "images/Back.png";
   document.getElementById("dl-img-2").style.width = "150px";
 
   tableCards.forEach((card, index) => {
