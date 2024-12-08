@@ -1,0 +1,268 @@
+/* === Общий стиль === */
+body {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  background-color: #2b2b2b;
+  background-image: url(background.jpg);
+  background-size: cover;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  height: 100px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.425);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(50px);
+  h2,
+  h4 {
+    margin: 0;
+  }
+}
+
+footer {
+  height: 80px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.425);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(50px);
+  padding-bottom: 10px;
+  h4 {
+    margin: 10px;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+
+    i {
+      font-size: 20px;
+    }
+  }
+}
+
+/* === Контейнер игры === */
+#game-container {
+  margin: 0 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* === Основной стол === */
+#table {
+  color: #dfdfdf;
+  background: transparent;
+  backdrop-filter: blur(15px);
+  width: 100%;
+  min-height: 700px;
+  margin: 20px 0;
+  border-radius: 40px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 0 20px #072e06;
+}
+
+#pl-deal-cards {
+  width: 30%;
+}
+
+#side-table-cards {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* === Логи === */
+#logs {
+  resize: none;
+  border: none;
+  background-color: #023502b4;
+  width: 840px;
+  margin: 20px;
+  height: 210px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  color: #b3b3b3;
+}
+
+/* === Контейнеры карт === */
+#dealer-container,
+#player-container,
+#table-container {
+  min-height: 200px;
+}
+#player-container {
+  margin-top: 82px;
+}
+#dealer-cards,
+#player-cards {
+  display: flex;
+  min-height: 210px;
+  gap: 10px;
+  justify-content: center;
+  img {
+    border-radius: 10px;
+    min-width: 150px;
+    min-height: 210px;
+    background-color: #02350288;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  img:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* === Карты на столе === */
+#table-cards {
+  display: flex;
+  min-height: 210px;
+  justify-content: center;
+  gap: 15px;
+
+  #flop,
+  #turn,
+  #river {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      color: #899988;
+      font-size: 15px;
+    }
+  }
+
+  div {
+    display: flex;
+    gap: 15px;
+    hr {
+      border: 1px solid #173a17d8;
+    }
+    img {
+      border-radius: 10px;
+      min-width: 150px;
+      min-height: 210px;
+      background-color: #02350288;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    img:hover {
+      transform: scale(1.05); 
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+/* === Боковое меню === */
+#side-menu {
+  width: 400px;
+  margin: 20px 0;
+  height: 700px;
+
+  #actions {
+    color: #dfdfdf;
+    background: transparent;
+    backdrop-filter: blur(15px);
+    height: 700px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 20px #072e06;
+  }
+}
+
+/* === Кнопки и управление === */
+#buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  margin: 10px 30px;
+  padding: 10px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  width: 210px;
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  cursor: pointer;
+  &:hover {
+    background-color: #a3a3a3;
+  }
+  &:disabled {
+    background-color: #666666;
+    cursor: not-allowed;
+  }
+}
+
+/* === Комбинации и правила === */
+#combinations {
+  color: #dfdfdf;
+  border-radius: 20px;
+
+  h3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    position: relative;
+    text-align: center;
+    padding: 12.5px;
+    cursor: pointer;
+  }
+
+  li:hover {
+    color: #fff;
+    font-weight: bolder;
+    .exmp {
+      display: block;
+    }
+  }
+}
+
+.exmp {
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-125%) translateY(45%);
+  
+  background: #232e1eb6;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  display: none;
+  text-align: left;
+  width: 350px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+
+  img {
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+}

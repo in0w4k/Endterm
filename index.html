@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="images/chip.png">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Poker Game</title>
+  </head>
+  <body>
+    <header>
+      <h2>POKER GAME</h2>
+      <h4>by in0w4.k</h4>
+    </header>
+    <main id="game-container">
+      <section id="table">
+        <div id="pl-deal-cards">
+          <div id="dealer-container">
+            <h2>Карты дилера</h2>
+            <div id="dealer-cards">
+              <img src="" alt="" id="dl-img-1" />
+              <img src="" alt="" id="dl-img-2" />
+            </div>
+          </div>
+          <div id="player-container">
+            <h2>Карты игрока</h2>
+            <div id="player-cards">
+              <img src="" alt="" id="pl-img-1" />
+              <img src="" alt="" id="pl-img-2" />
+            </div>
+          </div>
+        </div>
+        <div id="side-table-cards">
+          <div id="table-container">
+            <h2>Стол</h2>
+            <div id="table-cards">
+              <div id="flop">
+                <div>
+                  <img src="" alt="" id="table-img-1" />
+                  <img src="" alt="" id="table-img-2" />
+                  <img src="" alt="" id="table-img-3" />
+                  <hr />
+                </div>
+                <p>Флоп</p>
+              </div>
+              <div id="turn">
+                <div>
+                  <img src="" alt="" id="table-img-4" />
+                  <hr />
+                </div>
+                <p>Тёрн</p>
+              </div>
+              <div id="river">
+                <div>
+                  <img src="" alt="" id="table-img-5" />
+                </div>
+                <p>Ривер</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2>Логи</h2>
+            <textarea id="logs" readonly></textarea>
+          </div>
+        </div>
+      </section>
+
+      <aside id="side-menu">
+        <div id="actions">
+          <h2>Действия</h2>
+          <div id="buttons">
+            <button id="start">Начать</button>
+            <button id="end">Закончить</button>
+            <section id="combinations">
+              <h2>Комбинации карт</h2>
+              <ul>
+                <li>
+                  Роял Флеш
+                  <div class="exmp">
+                    <p>Самая сильная комбинация: 10, J, Q, K, A одной масти</p>
+                    <img src="images/FlashRoyal.png" alt="Пример Роял Флеша" />
+                  </div>
+                </li>
+                <li>
+                  Стрит Флеш
+                  <div class="exmp">
+                    <p>
+                      Пять последовательных карт одной масти (например,
+                      5-6-7-8-9)
+                    </p>
+                    <img
+                      src="images/StraightFlash.png"
+                      alt="Пример Стрит Флеша"
+                    />
+                  </div>
+                </li>
+                <li>
+                  Каре
+                  <div class="exmp">
+                    <p>Четыре карты одного достоинства (например, 4-4-4-4)</p>
+                    <img src="images/Care.png" alt="Пример Каре" />
+                  </div>
+                </li>
+                <li>
+                  Фулл Хаус
+                  <div class="exmp">
+                    <p>
+                      Три карты одного достоинства и пара другого (например,
+                      3-3-3 и 7-7)
+                    </p>
+                    <img src="images/FullHouse.png" alt="Пример Фулл Хауса" />
+                  </div>
+                </li>
+                <li>
+                  Флеш
+                  <div class="exmp">
+                    <p>
+                      Пять карт одной масти без последовательности (например,
+                      все червы)
+                    </p>
+                    <img src="images/Flash.png" alt="Пример Флеша" />
+                  </div>
+                </li>
+                <li>
+                  Стрит
+                  <div class="exmp">
+                    <p>
+                      Пять последовательных карт разных мастей (например,
+                      7-8-9-10-J)
+                    </p>
+                    <img src="images/Straight.png" alt="Пример Стрита" />
+                  </div>
+                </li>
+                <li>
+                  Тройка
+                  <div class="exmp">
+                    <p>Три карты одного достоинства (например, 8-8-8)</p>
+                    <img src="images/Set.png" alt="Пример Тройки" />
+                  </div>
+                </li>
+                <li>
+                  Две пары
+                  <div class="exmp">
+                    <p>
+                      Две пары карт одного достоинства (например, 9-9 и 5-5)
+                    </p>
+                    <img src="images//TwoPair.png" alt="Пример Двух Пар" />
+                  </div>
+                </li>
+                <li>
+                  Пара
+                  <div class="exmp">
+                    <p>Одна пара карт одного достоинства (например, Q-Q)</p>
+                    <img src="images//Pair.png" alt="Пример Пары" />
+                  </div>
+                </li>
+                <li>
+                  Старшая карта
+                  <div class="exmp">
+                    <p>Карта наивысшего достоинства в руке (например, A)</p>
+                    <img
+                      src="images//HighCard.png"
+                      alt="Пример Старшей Карты"
+                    />
+                  </div>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </aside>
+    </main>
+    <footer>
+      <h4>Контакты</h4>
+      <div class="contacts">
+        <a href="https://github.com/in0w4k" target="_blank">
+          <i class="bi bi-github"></i>
+        </a>
+        <a href="https://x.com/in0w4k/" target="_blank">
+          <i class="bi bi-twitter-x"></i>
+        </a>
+        <a href="https://t.me/in0w4" target="_blank">
+          <i class="bi bi-telegram"></i>
+        </a>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/combinations.js"></script>
+  </body>
+</html>
