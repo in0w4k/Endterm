@@ -32,11 +32,23 @@ function resolveTie(playerCards, dealerCards) {
   const sortedDealerCards = sortByRank(allDealerCards);
 
   for (let i = 0; i < sortedPlayerCards.length; i++) {
-    const playerRank = ranks.indexOf(sortedPlayerCards[i].rank);
-    const dealerRank = ranks.indexOf(sortedDealerCards[i].rank);
+    const playerIndex = ranks.indexOf(sortedPlayerCards[i].rank);
+    const dealerIndex = ranks.indexOf(sortedDealerCards[i].rank);
 
-    if (playerRank > dealerRank) return "player";
-    if (dealerRank > playerRank) return "dealer";
+    if (playerIndex > dealerIndex) return "player";
+    if (dealerIndex > playerIndex) return "dealer";
+      
+    if (playerIndex === dealerIndex && i < sortedPlayerCards.length - 1) {
+      const playerKicker = ranks.indexOf(sortedPlayerCards[i + 1].rank);
+      const dealerKicker = ranks.indexOf(sortedDealerCards[i + 1].rank);
+
+      if (playerKicker > dealerKicker) {
+        return "player";
+      }
+      if (dealerKicker > playerKicker) {
+        return "dealer";
+      }
+    }
   }
 
   return "tie";
