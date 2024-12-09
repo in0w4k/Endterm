@@ -34,9 +34,6 @@ function resolveTie(playerCards, dealerCards) {
   for (let i = 0; i < sortedPlayerCards.length; i++) {
     const playerIndex = ranks.indexOf(sortedPlayerCards[i].rank);
     const dealerIndex = ranks.indexOf(sortedDealerCards[i].rank);
-
-    if (playerIndex === 0 && dealerIndex != 0) return "player";
-    if (dealerIndex != 0 && playerIndex === 0) return "dealer";
     
     if (playerIndex > dealerIndex) return "player";
     if (dealerIndex > playerIndex) return "dealer";
