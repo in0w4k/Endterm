@@ -108,7 +108,7 @@ function Care(cards) {
 
 // ====================================================================================================== ФУНКЦИЯ -- Фулл-Хаус
 function FullHouse(cards) {
-  return getRankCounts(cards).includes(3) && getRankCounts(cards).includes(2);
+  return HighCard(cards, 3) && HighCard(cards, 2);
 }
 
 // ====================================================================================================== ФУНКЦИЯ -- Флеш
